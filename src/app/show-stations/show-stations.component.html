@@ -1,1 +1,6 @@
-<p>show-stations works!</p>
+<h1> Stations </h1>
+<div>
+  <div *ngFor="let station of stations">
+    <div>{{ station.Station }} | {{ station.Destination }} | {{ station.UpdateTime }}</div>
+  </div>
+</div>

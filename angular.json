@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "stations"
+    }
+  },
+  "defaultProject": "stations",
+  "cli": {
+    "analytics": false
+  }
 }

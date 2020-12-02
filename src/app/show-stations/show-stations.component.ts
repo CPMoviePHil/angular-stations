@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StationsService } from '../stations.service';
 
 @Component({
   selector: 'app-show-stations',
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./show-stations.component.css']
 })
 export class ShowStationsComponent implements OnInit {
-
-  constructor() { }
+  stations;
+  constructor(
+    private station: StationsService,
+  ) { }
 
   ngOnInit(): void {
+    this.stations = this.station.getStations();
   }
 
 }
