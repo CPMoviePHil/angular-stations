@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { ShowStationsComponent } from './show-stations/show-stations.component';
@@ -10,7 +11,10 @@ import { ShowStationsComponent } from './show-stations/show-stations.component';
     ShowStationsComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot([
+      { path: '', component: ShowStationsComponent },
+    ]),
   ],
   providers: [],
   bootstrap: [AppComponent]
